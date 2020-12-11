@@ -18,9 +18,9 @@
     
     e.remove();
   }
-function clear() {
-    //document.getElementById("demo").innerHTML ="";
-    alert("123");
+function clearAll() {
+    document.getElementById("demo").innerHTML ="";
+    
   }
   function drawCan() {
     var x = document.getElementById("demo").childElementCount;
@@ -46,14 +46,14 @@ function clear() {
 <body>
  
   <div>
-   
+   <input type="button" value="Clear" onclick="clearAll()" style="margin:0px 5px;width: 100%;">
     <div style="margin: 10px auto;width: 200px;">
      <div style="margin: 5px  auto">Eat what R</div>
       <input type="text" id="data" style="margin:  10px auto;width: 100%;align-content: center;">
       <div style=";">
         <input type="button" value="start" onclick="myfunction()" style="margin: 0px 5px;width: 100%;">
         <input type="button" value="draw" onclick="drawCan()" style="margin:0px 5px;width: 100%;">
-        <input type="button" value="Clear" onclick="clear()" style="margin:0px 5px;width: 100%;">
+        
       </div>
       
       <div id="demo"> </div>
