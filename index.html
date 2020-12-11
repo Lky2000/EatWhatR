@@ -24,7 +24,9 @@ function clearAll() {
   }
   function drawCan() {
     var x = document.getElementById("demo").childElementCount;
-    alert(x);
+    
+    var reult = Math.floor(Math.random() * x)+1;
+    alert(reult);
   }
   
 </script>
@@ -49,7 +51,7 @@ function clearAll() {
    <input type="button" value="Clear" onclick="clearAll()" style="margin:0px 5px;width: 100%;">
     <div style="margin: 10px auto;width: 200px;">
      <div style="margin: 5px  auto">Eat what R</div>
-      <input type="text" id="data" style="margin:  10px auto;width: 100%;align-content: center;">
+      <input type="text" id="data" style="margin:  10px auto;width: 100%;align-content: center;" onfocus="this.value=''"> 
       <div style=";">
         <input type="button" value="start" onclick="myfunction()" style="margin: 0px 5px;width: 100%;">
         <input type="button" value="draw" onclick="drawCan()" style="margin:0px 5px;width: 100%;">
