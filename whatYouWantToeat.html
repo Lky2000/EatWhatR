@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<script>
+  var i = 0;
+  function myfunction() {
+    var div2 = document.getElementById("data").value;
+    if (div2 == "") {} else {
+      document.getElementById("demo").innerHTML += "<div id ='" + i + "'style='border: 1px solid black;' onclick=\"deletediv(this)\" name='add'> " + div2 + "</div>";
+      i++;
+    }
+  }
+
+  function deletediv(e) {
+    alert(e.id);
+    e.remove();
+  }
+
+  function drawCan() {
+    var x = document.getElementById("demo").childElementCount;
+    alert(x);
+  }
+</script>
+<style>
+  #demo {
+    display: flex;
+    text-align: center;
+  }
+
+  #demo>div {
+    margin: 10px;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px solid black;
+  }
+</style>
+
+<body>
+ <div style="margin: 5px  auto">Eat what R</div>
+  <div>
+    <div style="margin: 10px auto;width: 200px;">
+      <input type="text" id="data" style="margin:  10px auto;">
+      <div>
+        <input type="button" value="start" onclick="myfunction()" style="margin:  5px auto;width: 40%;">
+        <input type="button" value="draw" onclick="drawCan()" style="margin:5px auto;width: 40%;">
+      </div>
+    </div>
+  </div>
+  <div id="demo"> </div>
+
+</body></html>
