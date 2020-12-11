@@ -15,19 +15,24 @@
   }
 
   function deletediv(e) {
-    alert(e.id);
+    
     e.remove();
   }
-
+function clear() {
+    //document.getElementById("demo").innerHTML ="";
+    alert("123");
+  }
   function drawCan() {
     var x = document.getElementById("demo").childElementCount;
     alert(x);
   }
+  
 </script>
 <style>
   #demo {
     display: flex;
     text-align: center;
+    flex-direction: column;
   }
 
   #demo>div {
@@ -39,16 +44,21 @@
 </style>
 
 <body>
- <div style="margin: 5px  auto">Eat what R</div>
+ 
   <div>
+   
     <div style="margin: 10px auto;width: 200px;">
-      <input type="text" id="data" style="margin:  10px auto;">
-      <div>
-        <input type="button" value="start" onclick="myfunction()" style="margin:  5px auto;width: 40%;">
-        <input type="button" value="draw" onclick="drawCan()" style="margin:5px auto;width: 40%;">
+     <div style="margin: 5px  auto">Eat what R</div>
+      <input type="text" id="data" style="margin:  10px auto;width: 100%;align-content: center;">
+      <div style=";">
+        <input type="button" value="start" onclick="myfunction()" style="margin: 0px 5px;width: 100%;">
+        <input type="button" value="draw" onclick="drawCan()" style="margin:0px 5px;width: 100%;">
+        <input type="button" value="Clear" onclick="clear()" style="margin:0px 5px;width: 100%;">
       </div>
+      
+      <div id="demo"> </div>
     </div>
   </div>
-  <div id="demo"> </div>
+  
 
 </body></html>
